@@ -1031,7 +1031,7 @@ PODS:
     - firebase_core
     - Flutter
   - firebase_storage (11.6.9):
-    - Firebase/Storage (= 10.22.0)
+    - Firebase/Storage (= 10.25.0)
     - firebase_core
     - Flutter
   - FirebaseAppCheckInterop (10.28.0)
