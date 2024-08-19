@@ -963,7 +963,7 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.32)
   - BoringSSL-GRPC/Interface (0.0.32)
   - cloud_firestore (4.15.8):
-    - Firebase/Firestore (= 10.22.0)
+    - Firebase/Firestore (= 10.25.0)
     - firebase_core
     - Flutter
     - nanopb (< 2.30910.0, >= 2.30908.0)
@@ -1013,8 +1013,8 @@ PODS:
     - DKImagePickerController/PhotoGallery
     - Flutter
   - Firebase/CoreOnly (10.25.0):
-    - FirebaseCore (= 10.22.0)
-  - Firebase/Firestore (10.22.0):
+    - FirebaseCore (= 10.25.0)
+  - Firebase/Firestore (10.25.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 10.25.0)
   - Firebase/Messaging (10.25.0):
