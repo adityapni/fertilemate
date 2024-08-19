@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fertilemate</string>
+    <string name="facebook_app_name">fertilemate application</string>
+    <string name="fb_login_protocol_scheme">f9c2535393b39c8b613d086832e9e783</string>
+    <string name="facebook_app_id">468434919418596</string>
+    <string name="facebook_client_token">aab46ea8c4f27fee2c6a7ce395fe38cd</string>
+</resources>

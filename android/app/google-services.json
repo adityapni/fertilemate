@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "111518978323",
+    "project_id": "fertilemate-f3a9c",
+    "storage_bucket": "fertilemate-f3a9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111518978323:android:c6c2cd613bb203626e0ae6",
+        "android_client_info": {
+          "package_name": "com.fertilemate.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111518978323-fefa19rlpttjnrfm114nbhdueudv6d9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHxrifqgx44KKHHlz0LrSk3yKcBTJdn8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111518978323-fefa19rlpttjnrfm114nbhdueudv6d9n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "111518978323-qbe28gato2ds44tvdjcfncuoa7b2bo0d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fertilityBoost"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111518978323:android:3842c522553954cd6e0ae6",
+        "android_client_info": {
+          "package_name": "com.fertility_boost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111518978323-fefa19rlpttjnrfm114nbhdueudv6d9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHxrifqgx44KKHHlz0LrSk3yKcBTJdn8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111518978323-fefa19rlpttjnrfm114nbhdueudv6d9n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "111518978323-qbe28gato2ds44tvdjcfncuoa7b2bo0d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fertilityBoost"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
