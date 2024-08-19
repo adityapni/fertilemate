@@ -1020,7 +1020,7 @@ PODS:
   - Firebase/Messaging (10.25.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 10.25.0)
-  - Firebase/Storage (10.22.0):
+  - Firebase/Storage (10.25.0):
     - Firebase/CoreOnly
     - FirebaseStorage (~> 10.22.0)
   - firebase_core (2.27.0):
