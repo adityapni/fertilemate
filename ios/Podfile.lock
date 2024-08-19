@@ -1027,7 +1027,7 @@ PODS:
     - Firebase/CoreOnly (= 10.22.0)
     - Flutter
   - firebase_messaging (14.7.19):
-    - Firebase/Messaging (= 10.22.0)
+    - Firebase/Messaging (= 10.25.0)
     - firebase_core
     - Flutter
   - firebase_storage (11.6.9):
