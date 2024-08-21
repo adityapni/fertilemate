@@ -93,5 +93,19 @@
       <string>fbapi</string>
       <string>fb-messenger-share-api</string>
     </array>
+    <key>GIDClientID</key>
+    <string>111518978323-1bc3oi25h7ot3b12ondadlioqj8ga7hg.apps.googleusercontent.com</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+    	<dict>
+    		<key>CFBundleTypeRole</key>
+    		<string>Editor</string>
+    		<key>CFBundleURLSchemes</key>
+    		<array>
+    			<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+    			<string>com.googleusercontent.apps.111518978323-1bc3oi25h7ot3b12ondadlioqj8ga7hg</string>
+    		</array>
+    	</dict>
+    </array>
 </dict>
 </plist>
