@@ -73,15 +73,6 @@
     <array>
         <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
     </array>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb468434919418596</string>
-        </array>
-      </dict>
-    </array>
     <key>FacebookAppID</key>
     <string>468434919418596</string>
     <key>FacebookClientToken</key>
@@ -102,6 +93,7 @@
     		<string>Editor</string>
     		<key>CFBundleURLSchemes</key>
     		<array>
+    		    <string>fb468434919418596</string>
     			<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
     			<string>com.googleusercontent.apps.111518978323-1bc3oi25h7ot3b12ondadlioqj8ga7hg</string>
     		</array>
