@@ -24,11 +24,7 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>sms</string>
-		<string>tel</string>
-	</array>
+
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 			<key>NSCameraUsageDescription</key>
@@ -83,6 +79,8 @@
     <array>
       <string>fbapi</string>
       <string>fb-messenger-share-api</string>
+      <string>sms</string>
+      <string>tel</string>
     </array>
     <key>GIDClientID</key>
     <string>111518978323-1bc3oi25h7ot3b12ondadlioqj8ga7hg.apps.googleusercontent.com</string>
