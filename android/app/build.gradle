@@ -66,8 +66,8 @@ android {
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
-        versionCode 10
-        versionName "1.10.0" // Change to a higher number
+        versionCode localProperties.getProperty('flutter.versionCode').toInteger()
+        versionName localProperties.getProperty('flutter.versionName') // Change to a higher number
         multiDexEnabled true
     }
 

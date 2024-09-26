@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:io';
 
+import 'package:fertility_boost/app/data/constants/image_constants.dart';
 import 'package:fertility_boost/common/theme_data.dart';
 import 'package:fertility_boost/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -42,7 +44,7 @@ Future<void> showNotification(
       priority: Priority.high,
       showWhen: false,
       visibility: NotificationVisibility.public,
-      icon: '@mipmap/ic_launcher',
+      icon: ImageConstants.imageLogo,
       color: Theme.of(Get.context!).primaryColor,
       enableVibration: true,
     );
@@ -72,6 +74,29 @@ Future<void> main() async {
   late StreamSubscription streamSubscription;
   AC().getNetworkConnectionType();
   streamSubscription = AC().checkNetworkConnection();
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
+
+  NotificationSettings settings = await messaging.requestPermission(
+    alert: true,
+    announcement: false,
+    badge: true,
+    carPlay: false,
+    criticalAlert: false,
+    provisional: false,
+    sound: true,
+  );
+  print('User granted permission: ${settings.authorizationStatus}');
+
+  if(Platform.isIOS){
+    String? apnsToken = await messaging.getAPNSToken();
+    if(apnsToken != null){
+      await messaging.subscribeToTopic("fertilemate");
+    }
+  } else {
+    await messaging.subscribeToTopic("fertilemate");
+  }
+
+
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   runApp(
     GetMaterialApp(

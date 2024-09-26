@@ -347,4 +347,7 @@ class ApiUrlConstants {
       '${baseUrl}check_social_media_registered';
   static const String endPointOfSocialLogin =
       '${baseUrl}social_login';
+  static const String  endPointOfSaveHealthAssessment = '${baseUrl}health-assessment';
+  static const String  endPointOfSaveHealthRecord = '${baseUrl}health-record';
+  static const String  endPointOfSaveFCMToken = '${baseUrl}save-fcm-token';
 }

@@ -304,6 +304,7 @@ abstract class Routes {
   static const PREDIABETES_QUIZ_ASSESMENT = _Paths.PREDIABETES_QUIZ_ASSESMENT;
   static const PRIVACY_POLICY = _Paths.PRIVACY_POLICY;
   static const SOCIAL_SIGNUP = _Paths.SOCIAL_SIGNUP;
+  static const HEALTH_REPORT = _Paths.HEALTH_REPORT;
 }
 
 abstract class _Paths {
@@ -585,4 +586,5 @@ abstract class _Paths {
   static const PREDIABETES_QUIZ_ASSESMENT = '/prediabetes-quiz-assesment';
   static const PRIVACY_POLICY = '/privacy-policy';
   static const SOCIAL_SIGNUP = '/social-signup';
+  static const HEALTH_REPORT = '/health-report';
 }

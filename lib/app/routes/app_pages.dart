@@ -1,3 +1,5 @@
+import 'package:fertility_boost/app/modules/health_report/bindings/health_report_binding.dart';
+import 'package:fertility_boost/app/modules/health_report/views/health_report_view.dart';
 import 'package:fertility_boost/app/modules/social_sign_up/bindings/social_sign_up_binding.dart';
 import 'package:fertility_boost/app/modules/social_sign_up/views/social_sign_up_view.dart';
 import 'package:get/get.dart';
@@ -1416,6 +1418,11 @@ class AppPages {
       name: _Paths.SOCIAL_SIGNUP,
       page: () => const SocialSignUpView(),
       binding: SocialSignUpBinding(),
+    ),
+    GetPage(
+      name: _Paths.HEALTH_REPORT,
+      page: () => const HealthReportView(),
+      binding: HealthReportBinding(),
     ),
   ];
 }

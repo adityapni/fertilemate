@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../data/apis/api_constants/api_key_constants.dart';
 import '../../../data/apis/api_methods/api_methods.dart';
@@ -168,7 +169,13 @@ class PrediabetesQuizAssesmentController extends GetxController {
         actions: <CupertinoDialogAction>[
           CupertinoDialogAction(
             isDestructiveAction: true,
-            onPressed: () {
+            onPressed: () async {
+              SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+              Map<String,String> saveAssessmentBody = {
+                'user_id': sharedPreferences.getString(ApiKeyConstants.userId) ?? '',
+                'prediabetes': stringValue.value
+              };
+              await ApiMethods.saveHealthAssessment(bodyParams: saveAssessmentBody);
               Get.back();
               selectedIndex.value = 0;
               Get.offNamed(Routes.NAV_BAR);

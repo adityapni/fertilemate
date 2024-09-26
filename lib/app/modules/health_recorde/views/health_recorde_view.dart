@@ -7,6 +7,7 @@ import '../../../../common/common_widgets.dart';
 import '../../../../common/progress_bar.dart';
 import '../../../data/constants/image_constants.dart';
 import '../../../data/constants/string_constants.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/health_recorde_controller.dart';
 
 class HealthRecordeView extends GetView<HealthRecordeController> {
@@ -91,6 +92,17 @@ class HealthRecordeView extends GetView<HealthRecordeController> {
                         )
                       ],
                     ),
+                    floatingActionButton: FloatingActionButton.extended(
+                      onPressed: () async {
+                        final result = await Get.toNamed(Routes.HEALTH_REPORT);
+                        if (result != null){
+                          controller.inAsyncCall.value = true;
+                          await controller.subCategoriesByCategoryIdApi(value: controller.selectedTab.value);
+                          controller.inAsyncCall.value = false;
+                        }
+                      },
+                      icon: Icon(Icons.add),
+                      label: Text('Health Record')),
                   ),
                 ),
               ),
@@ -138,12 +150,14 @@ class BloodTestView extends GetView<HealthRecordeController> {
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
-                          '${controller.bloodData[index].bloodName}\n${controller.bloodData[index].reportDate}',
-                          style:
-                              Theme.of(context).textTheme.titleSmall?.copyWith(
-                                    fontSize: 10.px,
-                                  ),
+                        Obx(
+                          ()=> Text(
+                            '${controller.bloodData.value[index].bloodName}\n${controller.bloodData.value[index].reportDate}',
+                            style:
+                                Theme.of(context).textTheme.titleSmall?.copyWith(
+                                      fontSize: 10.px,
+                                    ),
+                          ),
                         ),
                         SizedBox(width: 4.px),
                         Container(
@@ -155,15 +169,17 @@ class BloodTestView extends GetView<HealthRecordeController> {
                         )
                       ],
                     ),
-                    title: Text(
-                      controller.bloodData[index].bloodName.toString(),
-                      style: Theme.of(context)
-                          .textTheme
-                          .displayMedium
-                          ?.copyWith(fontSize: 16.px),
+                    title: Obx(
+                      ()=> Text(
+                        controller.bloodData.value[index].bloodName.toString(),
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayMedium
+                            ?.copyWith(fontSize: 16.px),
+                      ),
                     ),
                   ),
-              itemCount: controller.bloodData.length)
+              itemCount: controller.bloodData.value.length)
           : controller.getHealthRecordModel == null
               ? const SizedBox()
               : Center(child: CommonWidgets.dataNotFound()),
@@ -193,28 +209,34 @@ class DocumentView extends GetView<HealthRecordeController> {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    trailing: Text(
-                      controller.documentData[index].reportDate.toString(),
-                      style: Theme.of(context)
-                          .textTheme
-                          .displayMedium
-                          ?.copyWith(
-                              fontSize: 10.px,
-                              color: Theme.of(context).primaryColor),
+                    trailing: Obx(
+                      ()=> Text(
+                        controller.documentData.value[index].reportDate.toString(),
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayMedium
+                            ?.copyWith(
+                                fontSize: 10.px,
+                                color: Theme.of(context).primaryColor),
+                      ),
                     ),
-                    title: Text(
-                      controller.documentData[index].bloodName.toString(),
-                      style: Theme.of(context)
-                          .textTheme
-                          .displayMedium
-                          ?.copyWith(fontSize: 16.px),
+                    title: Obx(
+                      ()=> Text(
+                        controller.documentData.value[index].bloodName.toString(),
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayMedium
+                            ?.copyWith(fontSize: 16.px),
+                      ),
                     ),
-                    subtitle: Text(
-                      controller.documentData[index].dateTime.toString(),
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleSmall
-                          ?.copyWith(fontSize: 14.px),
+                    subtitle: Obx(
+                      ()=> Text(
+                        controller.documentData.value[index].dateTime.toString(),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleSmall
+                            ?.copyWith(fontSize: 14.px),
+                      ),
                     ),
                   ),
               itemCount: controller.documentData.length)

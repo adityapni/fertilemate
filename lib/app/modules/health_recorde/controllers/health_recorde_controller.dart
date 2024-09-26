@@ -14,8 +14,8 @@ class HealthRecordeController extends GetxController {
   Map<String, dynamic> bodyParams = {};
   String userId = '';
   GetHealthRecordModel? getHealthRecordModel;
-  List<Data> bloodData = [];
-  List<Data> documentData = [];
+  RxList<Data> bloodData = <Data>[].obs;
+  RxList<Data> documentData = <Data>[].obs;
 
   @override
   Future<void> onInit() async {
@@ -84,8 +84,8 @@ class HealthRecordeController extends GetxController {
     if (getHealthRecordModel != null &&
         getHealthRecordModel!.data!.isNotEmpty) {
       value == 0
-          ? (bloodData = getHealthRecordModel!.data!)
-          : (documentData = getHealthRecordModel!.data!);
+          ? (bloodData.value = getHealthRecordModel!.data!)
+          : (documentData.value = getHealthRecordModel!.data!);
     }
   }
 }

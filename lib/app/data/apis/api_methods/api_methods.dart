@@ -3273,4 +3273,50 @@ class ApiMethods {
     }
     return null;
   }
+
+  static Future<http.Response?> saveHealthAssessment({
+    void Function(int)? checkResponse,
+    required Map<String, dynamic> bodyParams,
+  }) async {
+    http.Response? response = await MyHttp.postMethod(
+        url: ApiUrlConstants.endPointOfSaveHealthAssessment,
+        bodyParams: bodyParams);
+    if (response != null) {
+      return response;
+    }
+    return null;
+  }
+
+  static Future<http.Response?> sendHealthAssessmentReport({
+    void Function(int)? checkResponse,
+    required Map<String, dynamic> bodyParams,
+    File? image,
+    String? imageKey,
+  }) async {
+    http.Response? response = await MyHttp.multipart(
+      imageKey: imageKey,
+      image: image,
+      url: ApiUrlConstants.endPointOfSaveHealthRecord,
+      checkResponse: checkResponse,
+      bodyParams: bodyParams,
+    );
+    if (response != null) {
+      print('response ${response.body}');
+      return response;
+    }
+    return null;
+  }
+
+  static Future<http.Response?> saveFCMToken({
+    void Function(int)? checkResponse,
+    required Map<String, dynamic> bodyParams,
+  }) async {
+    http.Response? response = await MyHttp.postMethod(
+        url: ApiUrlConstants.endPointOfSaveFCMToken,
+        bodyParams: bodyParams);
+    if (response != null) {
+      return response;
+    }
+    return null;
+  }
 }
